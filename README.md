@@ -28,8 +28,8 @@ Or install it yourself as:
                        file_name: 'In_the_Beginning',
                        marker: /(\D+)/) # Mark by verse
 
-    #Will save the file in the current directory under
-    #/audio/:file_name.
+    # Will save the file in the current directory under
+    # /audio/:file_name.
 
 ## Contributing
 
