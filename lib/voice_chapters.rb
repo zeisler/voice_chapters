@@ -11,10 +11,15 @@ class Voice_Chapters
     @file_name = file_name
     chapter_marker(marker)
     create_uuid
+    create_audio_folder
     create_audio_for_chapters
     create_audio_for_text
     set_chapter_marker
     clean_chapter_file
+  end
+
+  def create_audio_folder
+    Dir.mkdir(File.expand_path('audio',Dir.pwd)) unless File.directory? File.expand_path('audio',Dir.pwd)
   end
 
   def chapter_marker(expression)

@@ -5,15 +5,15 @@ require 'voice_chapters/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "voice_chapters"
-  spec.version       = '0.0.2'
+  spec.version       = '0.0.4'
   spec.authors       = ["Dustin Zeisler"]
   spec.email         = ["dustin@zive.me"]
-  spec.description   = %q{Using Mac system text to speech
-                          read some text and express chapter markers
-                          and gem will create an m4a file with chapters}
-  spec.summary       = %q{Using Mac system text to speech
-                          read some text and express chapter markers
-                          and gem will create an m4a file with chapters}
+  spec.description   = %q{Using the Mac system text-to-speech Voice Chapters will create an audio file
+                          with bookmarked chapters. It takes a regex capture
+                          group to define the chapter markers and the gem will create a m4a/acc file.}
+  spec.summary       = %q{Using the Mac system text-to-speech Voice Chapters will create an audio file
+                          with bookmarked chapters. It takes a regex capture
+                          group to define the chapter markers and the gem will create a m4a/acc file.}
   spec.homepage      = "https://github.com/zeisler/voice_chapters"
   spec.license       = "MIT"
 

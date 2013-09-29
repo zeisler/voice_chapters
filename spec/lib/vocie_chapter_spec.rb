@@ -22,6 +22,10 @@ describe Voice_Chapters do
     expect(@voice_chapters.chapters.length).to eq(5)
   end
 
+  it "create an audio directory if it doesn't already exist" do
+    expect(File.directory? File.expand_path('audio',Dir.pwd)).to eq(true)
+  end
+
   it "makes a file in audio directory named from param" do
     expect(File.exist?(@file_path)).to eq(true)
   end
