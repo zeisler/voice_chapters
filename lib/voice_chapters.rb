@@ -6,8 +6,9 @@ require 'chapter'
 
 class Voice_Chapters
   attr_reader :chapters
-  def initialize(text:nil, marker:nil)
+  def initialize(text:nil, marker:nil, file_name:file_name)
     @text = text
+    @file_name = file_name
     chapter_marker(marker)
     create_uuid
     create_audio_for_chapters
@@ -49,12 +50,12 @@ class Voice_Chapters
 
   def create_audio_for_text
     Voice.new({ string: @text,
-                "output-file" => "#{save_dir}/#{@uuid}.m4a",
+                "output-file" => "'#{save_dir}/#{@file_name}.m4a'",
                 "file-format" => "m4af" })
   end
 
   def set_chapter_marker
-    file = "#{save_dir}/#{@uuid}.m4a"
+    file = "#{save_dir}/#{@file_name}.m4a"
     chapters = chapters_mark_hash
     puts "Chapter.set_chapters('#{file}', #{chapters})"
     Chapter.set_chapters(file, chapters)
