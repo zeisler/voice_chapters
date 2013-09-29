@@ -5,7 +5,7 @@ require 'voice_chapters/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "voice_chapters"
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ["Dustin Zeisler"]
   spec.email         = ["dustin@zive.me"]
   spec.description   = %q{Using Mac system text to speech
